@@ -30,9 +30,9 @@ jobs:
 
     - name: Install from test and test running
       run: |
-        pip install --extra-index-url https://test.pypi.org/simple your_package_name
-        mkdir tmp && cd tmp && python -c 'import your_package_name'
-        pip uninstall -y your_package_name
+        pip install --extra-index-url https://test.pypi.org/simple balalaika
+        mkdir tmp && cd tmp && python -c 'import balalaika'
+        pip uninstall -y balalaika
         cd ..
     - name: Publish distribution 📦 to PyPI
       uses: pypa/gh-action-pypi-publish@master
@@ -42,8 +42,8 @@ jobs:
 
     - name: Install and test running
       run: |
-        pip install your_package_name
-        cd tmp && python -c 'import your_package_name'
+        pip install balalaika
+        cd tmp && python -c 'import balalaika'
         cd ..
 
     # - name: Build the docs

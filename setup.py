@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="your-package-name",
+    name="balalaika",
     version="0.1.0",
     description="A very nice python package",
     long_description=open("README.md").read(),
@@ -21,6 +21,8 @@ setup(
     ],
     install_requires=[
         "setuptools",
+        "trio",
+        "rich",
     ],
     extras_require={
         "test": ["pytest"],
